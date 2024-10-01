@@ -1,11 +1,28 @@
+import math
+
 class Point:
-    # TODO: Replace 'pass' with your code
-    pass
+    def __init__(self, x, y) -> None:
+        self.x = x
+        self.y = y
+    
+    def move(self, x, y):
+        # move point to new position
+        self.x = x
+        self.y = y
+    
+    def reset(self):
+        # reset coordinates to 0
+        self.x = 0
+        self.y = 0
+        
+    def calc_distance(self, other):
+        # calculates euclidean distance
+        return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
 
 
 if __name__ == "__main__":
-    p1 = Point()
-    p2 = Point()
+    p1 = Point(10, 23)
+    p2 = Point(25, 78)
 
     p1.reset()
     p2.reset()
