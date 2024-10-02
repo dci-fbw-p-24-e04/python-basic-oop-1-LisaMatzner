@@ -16,7 +16,6 @@ class Stack:
         """
         self._data.append(item)
 
-        pass
 
     def peek(self) -> int:
         """
