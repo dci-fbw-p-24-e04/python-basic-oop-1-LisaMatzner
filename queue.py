@@ -22,7 +22,7 @@ class Queue:
         return len(self._data)
 
     def enqueue(self, item):
-        self._data.append(item)
+        self._data.appendleft(item)
 
     def peek(self):
         if self.is_empty():
