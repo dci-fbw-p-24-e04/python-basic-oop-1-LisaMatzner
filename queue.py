@@ -32,10 +32,7 @@ class Queue:
     def dequeue(self):
         if self.is_empty():
             raise IndexError("Queue is empty")
-        else:
-            item = self._data[0]
-            self._data.popleft()
-            return item
+        return self._data.popleft()
 
     def __str__(self) -> str:
         return str(self._data)
